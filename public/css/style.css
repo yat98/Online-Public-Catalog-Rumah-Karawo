@@ -1,0 +1,44 @@
+html {
+    position: relative;
+    min-height: 100%
+}
+
+body {
+    margin-bottom: 260px;
+}
+
+.text-dark {
+    color: black;
+}
+
+.footer-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.img-potrait {
+    height: 533px;
+    width: 533px;
+}
+
+.img-detail-guest {
+    height: 950px;
+    width: 533px;
+}
+
+.img-detail {
+    height: 300px;
+    width: 300px;
+}
+
+.btn-green {
+    color: white;
+    background-color: #1F4103;
+}
+
+@media only screen and (max-width:767px) {
+    body {
+        margin-bottom: 300px !important;
+    }
+}

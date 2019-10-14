@@ -1,0 +1,4 @@
+[14-Oct-2019 01:21:47 Asia/Jakarta] PHP Warning:  require(/home/rumahkar/public_html/catalog\vendor/autoload.php): failed to open stream: No such file or directory in /home/rumahkar/public_html/catalog/index.php on line 24
+[14-Oct-2019 01:21:47 Asia/Jakarta] PHP Fatal error:  require(): Failed opening required '/home/rumahkar/public_html/catalog\vendor/autoload.php' (include_path='.:/opt/alt/php71/usr/share/pear') in /home/rumahkar/public_html/catalog/index.php on line 24
+[14-Oct-2019 01:21:50 Asia/Jakarta] PHP Warning:  require(/home/rumahkar/public_html/catalog\vendor/autoload.php): failed to open stream: No such file or directory in /home/rumahkar/public_html/catalog/index.php on line 24
+[14-Oct-2019 01:21:50 Asia/Jakarta] PHP Fatal error:  require(): Failed opening required '/home/rumahkar/public_html/catalog\vendor/autoload.php' (include_path='.:/opt/alt/php71/usr/share/pear') in /home/rumahkar/public_html/catalog/index.php on line 24
