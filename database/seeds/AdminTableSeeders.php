@@ -14,7 +14,7 @@ class AdminTableSeeders extends Seeder
     {
         Admin::create([
             'username'=>'adminrk',
-            'password'=>bcrypt('minmin123'),
+            'password'=>bcrypt('admin098'),
         ]);
     }
 }
