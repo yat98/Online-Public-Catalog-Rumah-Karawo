@@ -58,15 +58,13 @@ class PagesController extends Controller
         $minHargaTable = Produk::orderBy('harga','asc')->first()->harga ?? 0;
         $produks;
         $countProduks = 0;
-        $minHarga = 0;
-        $maxHarga = 100000;
+        $minHarga = Produk::orderBy('harga','asc')->first()->harga ?? 0;
+        $maxHarga = Produk::orderBy('harga','desc')->first()->harga ?? 100000;
 
         if(($inputMinHarga != null) && ($inputMaxHarga != null)){
             $query = DB::table('produk')->orderBy('harga','asc')
                                         ->whereBetween('harga',[$inputMinHarga,$inputMaxHarga]);
-            $minHarga = $inputMinHarga;
-            $maxHarga = $inputMaxHarga;
-            
+    
             if(!empty($inputKategori)){
                 $query->whereIn('id_kategori',$inputKategori);
             }
@@ -81,8 +79,6 @@ class PagesController extends Controller
 
         if(!empty($cari)){
             $produks = Produk::where('nama_produk','like',"%$cari%")->orderBy('harga','asc')->paginate(10);
-            $minHarga = Produk::orderBy('harga','asc')->first()->harga ?? 0;
-            $maxHarga = Produk::orderBy('harga','desc')->first()->harga ?? 100000;
             $countProduks= $produks->count();
         }
         Session::flash('search-message-title','Data Produk Tidak Ada');
