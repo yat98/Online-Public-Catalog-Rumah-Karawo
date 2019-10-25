@@ -91,11 +91,15 @@ class AdminController extends Controller
             $produksStatistikJenis[$data->jenis_kain] = $countData;
         }  
 
+        arsort($produksStatistikKategori);
+        arsort($produksStatistikJenis);
+
         $data = [
             'produks'=>$produks,
             'produksStatistikKategori'=>$produksStatistikKategori,
             'produksStatistikJenis'=>$produksStatistikJenis,
         ];
+
         $pdf = PDF::loadView('admin.pages.laporan', $data);
         return $pdf->download('laporan_produk_'.Carbon::now()->format('Ymd_His'));
     }
